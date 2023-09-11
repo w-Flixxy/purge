@@ -1,4 +1,4 @@
-@client.tree.command(name="purge", description="Remove the given ammount of messages")
+@client.tree.command(name="purge", description="Removes the given ammount of messages")
 @app_commands.checks.has_permissions(manage_messages = True)
 @app_commands.describe(amount="How much messages should be purged?")
 async def purge_command(interaction: discord.Interaction, amount:int):
