@@ -1,6 +1,7 @@
 @client.tree.command(name="purge", description="Removes the given ammount of messages")
 @app_commands.checks.has_permissions(manage_messages = True)
 @app_commands.describe(amount="How much messages should be purged?")
+nopermembed=discord.Embed(title = ":x: | Missing permission!",description = "I'm missing permission to execute this command!", colour = discord.colour.parse_hex_code("F20000")
 async def purge_command(interaction: discord.Interaction, amount:int):
     await interaction.response.send_message(f"Purging {amount} message(s)!", ephemeral=True)
     await interaction.channel.purge(limit=amount)
