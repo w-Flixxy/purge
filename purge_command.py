@@ -1,3 +1,5 @@
+nopermemb=discord.Embed(title = ":x: | Missing permission!",description = "I'm missing permission to execute this command!", colour = discord.colour.parse_hex_number("F20000"))
+
 username = "your username here"
 
 @client.tree.command(name="purge", description="Removes the given ammount of messages")
