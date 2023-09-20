@@ -3,8 +3,8 @@ nopermemb=discord.Embed(title = ":x: | Missing permission!",description = "I'm m
 username = "your username here"
 
 @client.tree.command(name="purge", description="Removes the given ammount of messages")
-@client.tree.command.checks.has_permissions(manage_messages = True)
-@client.tree.command.describe(amount="How much messages should be purged?")
+@app_commands.checks.has_permissions(manage_messages = True)
+@app_commands.describe(amount="How much messages should be purged?")
 async def purge_command(interaction: discord.Interaction, amount:int):
     await interaction.response.send_message(f"Purging {amount} message(s)!", ephemeral=True)
     await interaction.channel.purge(limit=amount)
